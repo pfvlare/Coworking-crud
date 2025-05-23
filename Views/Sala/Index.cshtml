@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CRUD.Models.Sala>
+
+@{
+    ViewData["Title"] = "Salas";
+}
+
+<div class="d-flex justify-content-between align-items-center mt-3 mb-4">
+    <h2 class="mb-0"><i class="bi bi-door-open-fill text-primary"></i> Lista de Salas</h2>
+    <a asp-action="Create" class="btn btn-success">
+        <i class="bi bi-plus-circle"></i> Nova Sala
+    </a>
+</div>
+
+<table class="table table-bordered table-hover align-middle">
+    <thead class="table-light">
+        <tr>
+            <th>Nome</th>
+            <th>Tipo de Sala</th>
+            <th style="width: 150px;">Ações</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Any())
+        {
+            foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Nome</td>
+                    <td>@item.TipoSala?.Nome</td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-warning btn-sm me-1">
+                            <i class="bi bi-pencil-square"></i>
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger btn-sm">
+                            <i class="bi bi-trash3-fill"></i>
+                        </a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="3" class="text-center text-muted">Nenhuma sala cadastrada.</td>
+            </tr>
+        }
+    </tbody>
+</table>

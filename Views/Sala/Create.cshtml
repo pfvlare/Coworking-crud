@@ -1,0 +1,32 @@
+﻿@model CRUD.Models.Sala
+
+@{
+    ViewData["Title"] = "Nova Sala";
+}
+
+<h2 class="mt-3">Cadastrar Nova Sala</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Nome" class="control-label">Nome da Sala</label>
+        <input asp-for="Nome" class="form-control" />
+        <span asp-validation-for="Nome" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-3">
+        <label asp-for="TipoSalaId" class="control-label">Tipo da Sala</label>
+        <select asp-for="TipoSalaId" class="form-control" asp-items="ViewBag.TipoSalaId">
+            <option value="">-- Selecione o tipo --</option>
+        </select>
+        <span asp-validation-for="TipoSalaId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mt-4">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancelar</a>
+    </div>
+</form>
+
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

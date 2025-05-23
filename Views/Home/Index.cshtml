@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Bem-vindo";
+}
+
+<div class="container py-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4">Bem-vindo ao <strong>CoworkingApp</strong></h1>
+        <p class="lead">Gerencie salas, clientes e reservas de forma rápida e intuitiva.</p>
+    </div>
+
+    <div class="row text-center">
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <i class="bi bi-person-circle display-4 text-primary mb-3"></i>
+                    <h5 class="card-title">Clientes</h5>
+                    <p class="card-text">Gerencie o cadastro de seus clientes.</p>
+                    <a href="/Cliente" class="btn btn-outline-primary btn-sm">Acessar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <i class="bi bi-door-open-fill display-4 text-success mb-3"></i>
+                    <h5 class="card-title">Salas</h5>
+                    <p class="card-text">Veja e atualize o status das salas disponíveis.</p>
+                    <a href="/Sala" class="btn btn-outline-success btn-sm">Acessar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <i class="bi bi-list-check display-4 text-warning mb-3"></i>
+                    <h5 class="card-title">Tipos de Sala</h5>
+                    <p class="card-text">Adicione categorias e valores por hora.</p>
+                    <a href="/TipoSala" class="btn btn-outline-warning btn-sm">Acessar</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 mb-4">
+            <div class="card shadow-sm h-100">
+                <div class="card-body">
+                    <i class="bi bi-calendar-check-fill display-4 text-danger mb-3"></i>
+                    <h5 class="card-title">Reservas</h5>
+                    <p class="card-text">Visualize, edite e crie novas reservas.</p>
+                    <a href="/Reserva" class="btn btn-outline-danger btn-sm">Acessar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
