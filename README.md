@@ -26,19 +26,6 @@ Aplicação web desenvolvida em **ASP.NET Core MVC** com Entity Framework Core p
 
 ---
 
-## 📸 Layout
-
-### 🔹 Dashboard de Reservas
-![Reservas](./readme-assets/reservas.png)
-
-### 🔹 Cadastro de Sala
-![Sala](./readme-assets/cadastro-sala.png)
-
-### 🔹 Cadastro de Cliente
-![Cliente](./readme-assets/cadastro-cliente.png)
-
----
-
 ## 🚀 Como Executar Localmente
 
 1. Clone este repositório:
